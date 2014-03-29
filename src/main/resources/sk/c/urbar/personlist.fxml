@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import sk.c.urbar.component.table.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER" hgap="10.0"
+          vgap="10.0"
+          fx:controller="sk.c.urbar.PersonListController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+
+    <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="0"
+          GridPane.rowIndex="0">
+        <children>
+            <Label text="%search"/>
+            <TextField fx:id="searchField" prefWidth="-1.0" HBox.hgrow="ALWAYS" minHeight="25"/>
+
+            <Label text="%activeOnly"/>
+            <CheckBox fx:id="activeField" selected="true" prefWidth="-1.0" minHeight="25"/>
+        </children>
+    </HBox>
+    <TableView fx:id="tableView" GridPane.columnIndex="0"
+               GridPane.rowIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="firstnameColumn" text="%firstName" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="firstName"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="%surName" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="surName"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="%votesSum" prefWidth="100">
+                <cellValueFactory>
+                    <SharesVotesSumValueFactory property="shares"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="%address" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="address"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="%identification" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="identification"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="%birthDate" prefWidth="100">
+                <cellValueFactory>
+                    <FormatedPropertyDateValueFactory property="birthDate" format="%dateFormat"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="%registeredFrom" prefWidth="100">
+                <cellValueFactory>
+                    <FormatedPropertyDateValueFactory property="registeredFrom" format="%dateFormat"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="%registeredTo" prefWidth="100">
+                <cellValueFactory>
+                    <FormatedPropertyDateValueFactory property="registeredTo" format="%dateFormat"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="%email" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="%bankAccount" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="bankAccount"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="activeColumn" text="%active" prefWidth="50">
+                <cellValueFactory>
+                    <BooleanValueFactory property="active" trueValue="%true" falseValue="%false"/>
+
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+
+    </TableView>
+    <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="0"
+          GridPane.rowIndex="3">
+        <!--<TextField fx:id="firstNameField" promptText="%firstName"-->
+        <!--prefWidth="90"/>-->
+        <!--<TextField fx:id="surNameField" promptText="%surName"-->
+        <!--prefWidth="90"/>-->
+        <!--<TextField fx:id="addressField" promptText="%address"-->
+        <!--prefWidth="150"/>-->
+        <!--<TextField fx:id="emailField" promptText="%email"-->
+        <!--prefWidth="150"/>-->
+        <!--<TextField fx:id="birthDateField" promptText="%birthDate"-->
+        <!--prefWidth="150"/>-->
+        <!--<TextField fx:id="registeredFromField" promptText="%registeredFrom"-->
+        <!--prefWidth="150"/>-->
+        <!--<TextField fx:id="bankAccountField" promptText="%bankAccount"-->
+        <!--prefWidth="150"/>-->
+        <Button text="%add" onAction="#addPerson"/>
+        <Button text="%edit" onAction="#editPerson"/>
+        <Button text="%delete" onAction="#deletePerson"/>
+    </HBox>
+</GridPane>

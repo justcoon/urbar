@@ -1,0 +1,30 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" prefHeight="224.0" prefWidth="321.0"
+            fx:controller="sk.c.urbar.ShareFormController">
+    <children>
+        <GridPane prefHeight="380.0" prefWidth="400.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+                  AnchorPane.topAnchor="10.0" vgap="5" hgap="5">
+            <padding>
+                <Insets top="5" right="5" bottom="5" left="5"/>
+            </padding>
+            <children>
+                <Label text="%part" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <Label text="%votes" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+                <TextField fx:id="part" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Label fx:id="votes" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            </children>
+
+        </GridPane>
+        <HBox id="HBox" alignment="CENTER" minWidth="-1.0" spacing="5.0" AnchorPane.bottomAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleOk" prefWidth="80.0" text="%save"/>
+                <Button mnemonicParsing="false" onAction="#handleCancel" prefWidth="80.0" text="%back"/>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

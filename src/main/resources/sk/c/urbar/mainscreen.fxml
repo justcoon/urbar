@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:id="root"
+            fx:controller="sk.c.urbar.MainScreenController">
+    <top>
+        <MenuBar>
+            <Menu text="%file">
+                <items>
+                    <MenuItem text="%open" fx:id="open" onAction="#onOpen"/>
+                    <MenuItem text="%save" fx:id="save" onAction="#onSave"/>
+                    <MenuItem text="%saveAs" fx:id="saveAs" onAction="#onSaveAs"/>
+
+                    <SeparatorMenuItem></SeparatorMenuItem>
+                    <MenuItem text="%info" fx:id="info" onAction="#onInfo"/>
+                    <SeparatorMenuItem></SeparatorMenuItem>
+                    <MenuItem text="%importCSV" fx:id="importCSV" onAction="#onImportCSV"/>
+                    <MenuItem text="%exportCSV" fx:id="exportCSV" onAction="#onExportCSV"/>
+                    <MenuItem text="%exportPDF" fx:id="exportPDF" onAction="#onExportPDF"/>
+                    <SeparatorMenuItem></SeparatorMenuItem>
+                    <MenuItem text="%exit" fx:id="exit" onAction="#onExit"/>
+                </items>
+            </Menu>
+            <Menu text="%edit">
+                <items>
+                    <MenuItem text="%persons" fx:id="persons" onAction="#onPersons"/>
+                    <MenuItem text="%rates" fx:id="rates" onAction="#onRates"/>
+                </items>
+            </Menu>
+
+            <Menu text="%about" onAction="#onAbout">
+            </Menu>
+        </MenuBar>
+    </top>
+</BorderPane>

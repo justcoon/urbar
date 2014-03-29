@@ -1,0 +1,133 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import sk.c.urbar.component.input.RestrictiveTextField?>
+<?import sk.c.urbar.component.table.ShareVotesValueFactory2?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" prefHeight="450.0" prefWidth="450.0"
+            fx:controller="sk.c.urbar.PersonFormController">
+    <children>
+        <GridPane prefHeight="420.0" prefWidth="450.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+                  AnchorPane.topAnchor="10.0" vgap="5" hgap="5">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <children>
+                <Label text="%firstName" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <Label text="%surName" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <Label text="%address" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <Label text="%email" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <Label text="%bankAccount" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <Label text="%identification" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                <Label text="%birthDate" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                <Label text="%registeredFrom" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+                <Label text="%registeredTo" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+                <Label text="%document" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+                <Label text="%notice" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+                <TextField fx:id="firstNameField" minHeight="20.0" prefWidth="200.0" GridPane.columnIndex="1"
+                           GridPane.rowIndex="0"/>
+                <TextField fx:id="surNameField" minHeight="20.0" prefWidth="200.0" GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"/>
+                <TextField fx:id="addressField" minHeight="20.0" prefWidth="200.0" GridPane.columnIndex="1"
+                           GridPane.rowIndex="2"/>
+                <TextField fx:id="emailField" minHeight="20.0" prefWidth="200.0" GridPane.columnIndex="1"
+                           GridPane.rowIndex="3"/>
+                <TextField fx:id="bankAccountField" minHeight="20.0" prefWidth="200.0" GridPane.columnIndex="1"
+                           GridPane.rowIndex="4"/>
+
+                <TextField fx:id="identificationField" minHeight="20.0" prefWidth="200.0" GridPane.columnIndex="1"
+                           GridPane.rowIndex="5"/>
+
+                <RestrictiveTextField fx:id="birthDateField" minHeight="20.0" prefWidth="200.0" GridPane.columnIndex="1"
+                                      GridPane.rowIndex="6" maxLength="10"
+                                      promptText="%datePrompt"/>
+                <RestrictiveTextField fx:id="registeredFromField" minHeight="20.0" prefWidth="200.0"
+                                      GridPane.columnIndex="1"
+                                      GridPane.rowIndex="7" maxLength="10"
+                                      promptText="%datePrompt"/>
+
+                <RestrictiveTextField fx:id="registeredToField" minHeight="20.0" prefWidth="200.0"
+                                      GridPane.columnIndex="1"
+                                      GridPane.rowIndex="8" maxLength="10"
+                                      promptText="%datePrompt"/>
+                <!--
+               <DatePicker fx:id="birthDateField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+                <DatePicker fx:id="registeredFromField" prefWidth="200.0" GridPane.columnIndex="1"
+                            GridPane.rowIndex="6"/>
+                <DatePicker fx:id="registeredToField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+                 -->
+                <TextArea fx:id="documentField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9"
+                          GridPane.rowSpan="2"/>
+                <TextArea fx:id="noticeField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10"
+                          GridPane.rowSpan="3"/>
+
+                <Label text="%active" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                <CheckBox fx:id="activeField" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                <Label text="%votesSum" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <Label fx:id="votesSum" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                <TableView fx:id="sharesTableView" GridPane.columnIndex="2"
+                           GridPane.rowIndex="2" GridPane.rowSpan="7" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="sharePart" text="%part" prefWidth="80" minWidth="80">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="part"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="shareVotes" text="%votes" prefWidth="80" minWidth="80">
+                            <cellValueFactory>
+                                <!--<ShareVotesValueFactory property="part"/>-->
+                                <ShareVotesValueFactory2/>
+                            </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn fx:id="shareCustom" text="%custom" prefWidth="80" minWidth="80">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="custom"/>
+                            </cellValueFactory>
+                        </TableColumn>
+
+                    </columns>
+
+                </TableView>
+                <HBox id="HBox" alignment="CENTER_RIGHT" minWidth="-1.0" spacing="5.0" GridPane.columnIndex="2"
+                      GridPane.rowIndex="9" GridPane.columnSpan="2">
+                    <children>
+                        <Button text="%add" onAction="#addShare"/>
+                        <!--
+                        <Button text="%edit" onAction="#editShare"/>
+                        -->
+                        <Button text="%delete" onAction="#deleteShare"/>
+                    </children>
+                </HBox>
+
+            </children>
+            <columnConstraints>
+                <ColumnConstraints fillWidth="true" hgrow="SOMETIMES" maxWidth="150.0" minWidth="80.0"
+                                   prefWidth="150.0"/>
+                <ColumnConstraints fillWidth="true" hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0"
+                                   prefWidth="250.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+        </GridPane>
+        <HBox id="HBox" alignment="CENTER" minWidth="-1.0" spacing="5.0" AnchorPane.bottomAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleOk" prefWidth="80.0" text="%save"/>
+                <Button mnemonicParsing="false" onAction="#handleCancel" prefWidth="80.0" text="%back"/>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
