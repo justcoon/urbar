@@ -1,1 +1,1 @@
-simple Urbar unitholders management
+simple Urbar unitholders management with JavaFX frontend
