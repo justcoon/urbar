@@ -5,11 +5,9 @@ import java.util.List;
 import java.util.Vector;
 
 /**
- * Created with IntelliJ IDEA.
- * User: coon
- * Date: 11/25/13
- * Time: 5:53 PM
- * To change this template use File | Settings | File Templates.
+ * person dto
+ *
+ * @author coon
  */
 public class Person {
 

@@ -3,13 +3,22 @@ package sk.c.urbar.component.validator;
 import java.util.*;
 
 /**
- * Created by coon on 12/30/13.
+ * validator utils
+ *
+ * @author coon
  */
 public class ValidatorUtils {
     private ValidatorUtils() {
 
     }
 
+    /**
+     * contains state ?
+     *
+     * @param results
+     * @param states
+     * @return
+     */
     public static boolean containsStates(Collection<? extends IValidationResult> results, ValidatorState... states) {
         boolean retVal = false;
 
@@ -30,6 +39,13 @@ public class ValidatorUtils {
 
     }
 
+    /**
+     * get summary message
+     * @param results
+     * @param separator
+     * @param states
+     * @return
+     */
     public static String getMessage(Collection<? extends IValidationResult> results, String separator, ValidatorState... states) {
         String retVal = null;
 

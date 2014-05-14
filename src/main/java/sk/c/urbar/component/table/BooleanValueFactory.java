@@ -1,11 +1,7 @@
 package sk.c.urbar.component.table;
 
 /**
- * Created with IntelliJ IDEA.
- * User: coon
- * Date: 11/25/13
- * Time: 6:51 PM
- * To change this template use File | Settings | File Templates.
+ * boolean {@link sk.c.urbar.component.table.PropertyValueFactory}
  */
 public class BooleanValueFactory extends PropertyValueFactory<Boolean> {
     protected String trueValue = ("true");

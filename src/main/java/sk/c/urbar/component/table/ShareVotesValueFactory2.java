@@ -9,11 +9,9 @@ import sk.c.urbar.data.RateUtils;
 import sk.c.urbar.data.entity.Share;
 
 /**
- * Created with IntelliJ IDEA.
- * User: coon
- * Date: 11/25/13
- * Time: 6:51 PM
- * To change this template use File | Settings | File Templates.
+ * share votes cell value factory
+ *
+ * @author coon
  */
 public class ShareVotesValueFactory2 implements Callback<TableColumn.CellDataFeatures<Object, String>, ObservableValue<String>> {
 

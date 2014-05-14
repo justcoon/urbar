@@ -8,7 +8,8 @@ import javafx.scene.control.TableCell;
 import org.apache.commons.beanutils.ConvertUtils;
 
 /**
- * Created by coon on 3/22/14.
+ * editable checkbox {@link javafx.scene.control.TableCell}
+ * @author coon
  */
 public class EditingCheckBoxCell<S, T> extends TableCell<S, T> {
     private CheckBox checkBox;

@@ -7,6 +7,8 @@ import javafx.scene.control.TextField;
 import org.apache.commons.beanutils.ConvertUtils;
 
 /**
+ * editable text field {@link javafx.scene.control.TableCell}
+ * @author coon
  * http://docs.oracle.com/javafx/2/ui_controls/table-view.htm
  */
 public class EditingTextFieldCell<S, T> extends TableCell<S, T> {

@@ -4,11 +4,9 @@ import sk.c.urbar.data.RateController;
 import sk.c.urbar.data.RateUtils;
 
 /**
- * Created with IntelliJ IDEA.
- * User: coon
- * Date: 11/25/13
- * Time: 6:51 PM
- * To change this template use File | Settings | File Templates.
+ * share votes {@link sk.c.urbar.component.table.PropertyValueFactory}
+ *
+ * @author coon
  */
 public class ShareVotesValueFactory extends PropertyValueFactory<Integer> {
 

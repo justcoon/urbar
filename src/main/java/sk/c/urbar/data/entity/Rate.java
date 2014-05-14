@@ -1,7 +1,9 @@
 package sk.c.urbar.data.entity;
 
 /**
- * Created by coon on 12/27/13.
+ * rate dto
+ *
+ * @author coon
  */
 public class Rate {
     Integer part;

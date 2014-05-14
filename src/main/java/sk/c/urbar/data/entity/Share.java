@@ -1,7 +1,9 @@
 package sk.c.urbar.data.entity;
 
 /**
- * Created by coon on 12/25/13.
+ * share dto
+ *
+ * @author coon
  */
 public class Share {
 

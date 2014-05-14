@@ -1,11 +1,22 @@
 package sk.c.urbar.component.validator;
 
 /**
- * Created by coon on 12/30/13.
+ * validation result
+ *
+ * @see sk.c.urbar.component.validator.ValidatorState
+ *
  */
 public interface IValidationResult {
 
+    /**
+     * get validation state
+     * @return
+     */
     ValidatorState getState();
 
+    /**
+     * get validation message
+     * @return
+     */
     String getMessage();
 }

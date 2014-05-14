@@ -4,11 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created with IntelliJ IDEA.
- * User: coon
- * Date: 11/25/13
- * Time: 6:51 PM
- * To change this template use File | Settings | File Templates.
+ * formated {@link sk.c.urbar.component.table.PropertyValueFactory}
+ *
+ * @author coon
  */
 public class FormatedPropertyDateValueFactory extends PropertyValueFactory<java.util.Date> {
 

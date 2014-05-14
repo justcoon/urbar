@@ -1,9 +1,18 @@
 package sk.c.urbar.component.validator;
 
 /**
- * Created by coon on 12/30/13.
+ * type validator
+ * @author coon
+ *
+ * @see sk.c.urbar.component.validator.IValidationResult
  */
 public interface ITypeValidator<T> {
+
+    /**
+     * validate
+     * @param typeToValidate
+     * @return
+     */
     IValidationResult validate(T typeToValidate);
 
 }

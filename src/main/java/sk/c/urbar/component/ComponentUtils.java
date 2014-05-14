@@ -9,7 +9,7 @@ package sk.c.urbar.component;
 //import java.time.format.DateTimeFormatter;
 
 /**
- * Created by coon on 12/23/13.
+ * @deprecated
  */
 public final class ComponentUtils {
     private ComponentUtils() {

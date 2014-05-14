@@ -3,7 +3,8 @@ package sk.c.urbar.component.validator;
 import java.util.ResourceBundle;
 
 /**
- * Created by coon on 12/30/13.
+ * regex {@link sk.c.urbar.component.validator.ITypeValidator}
+ * @author coon
  */
 public class RegexTypeValidator<T> extends ATypeValidator<T> {
 
