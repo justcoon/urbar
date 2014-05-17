@@ -42,10 +42,23 @@ public class Dialog {
         return ResourceBundle.getBundle(Main.MESSAGE_BUNDLES, getLocale());
     }
 
+    /**
+     * get dialog stage
+     * @return
+     */
     public Stage getStage() {
         return dialog;
     }
 
+    /**
+     * show dialog
+     *
+     * @param fxml
+     * @param value
+     * @param <T>
+     * @return
+     * @throws Exception
+     */
     public <T> T dialog(String fxml, WritableValue<?> value) throws Exception {
 
 

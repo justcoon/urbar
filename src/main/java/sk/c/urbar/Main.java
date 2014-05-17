@@ -45,10 +45,20 @@ public class Main extends Application {
         return instance;
     }
 
+    /**
+     * main
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         launch(args);
     }
 
+    /**
+     * get statge
+     *
+     * @return
+     */
     public Stage getStage() {
         return stage;
     }
@@ -106,10 +116,20 @@ public class Main extends Application {
         return c;
     }
 
+    /**
+     * get content handler
+     *
+     * @return
+     */
     public IContentHandler getContentHandler() {
         return contentChanger;
     }
 
+    /**
+     * get event bus
+     *
+     * @return
+     */
     public EventBus getEventBus() {
         return eventBus;
     }
