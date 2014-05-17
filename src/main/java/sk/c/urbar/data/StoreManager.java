@@ -21,6 +21,8 @@ import java.util.Map;
  * {@link sk.c.urbar.data.IStoreManager} impl
  *
  * @author coon
+ *
+ * @see com.thoughtworks.xstream.XStream
  */
 public class StoreManager implements IStoreManager {
 
