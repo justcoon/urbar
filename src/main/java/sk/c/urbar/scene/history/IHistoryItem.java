@@ -4,6 +4,8 @@ import javafx.scene.Parent;
 
 /**
  * history item
+ *
+ * @author coon
  */
 public interface IHistoryItem {
 

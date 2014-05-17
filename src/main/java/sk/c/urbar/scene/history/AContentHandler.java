@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 
 /**
  * {@link IContentHandler} abstract
+ * @author coon
  */
 public abstract class AContentHandler implements IContentHandler {
 

@@ -4,6 +4,8 @@ package sk.c.urbar.settings;
  * setting manager
  *
  * @see sk.c.urbar.settings.SettingProperty
+ *
+ * @author coon
  */
 public interface ISettingsManager {
 

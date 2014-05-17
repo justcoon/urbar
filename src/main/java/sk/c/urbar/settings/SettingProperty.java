@@ -2,6 +2,8 @@ package sk.c.urbar.settings;
 
 /**
  * settings property
+ *
+ * @author coon
  */
 public enum SettingProperty {
     /**
@@ -22,12 +24,20 @@ public enum SettingProperty {
         this.propertyName = propertyName;
     }
 
+    /**
+     * get property name
+     *
+     * @return
+     */
     public String propertyName() {
         return propertyName;
-
-
     }
 
+    /**
+     * get default value
+     *
+     * @return
+     */
     public Object defaultValue() {
         return defaultValue;
     }

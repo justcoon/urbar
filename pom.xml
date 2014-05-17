@@ -11,7 +11,8 @@
 
     <properties>
         <javafx.version>2.2</javafx.version>
-        <javafx.runtime.lib.jar>/opt/jdk7/jre/lib/jfxrt.jar</javafx.runtime.lib.jar>
+        <!--<javafx.runtime.lib.jar>/opt/jdk7/jre/lib/jfxrt.jar</javafx.runtime.lib.jar>-->
+        <javafx.runtime.lib.jar>/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/jfxrt.jar</javafx.runtime.lib.jar>
     </properties>
 
     <dependencies>

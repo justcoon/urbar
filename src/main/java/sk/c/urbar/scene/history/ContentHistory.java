@@ -3,7 +3,9 @@ package sk.c.urbar.scene.history;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Created by coon on 12/25/13.
+ * {@link sk.c.urbar.scene.history.IContentHistory} impl
+ *
+ * @author coon
  */
 public class ContentHistory implements IContentHistory {
 

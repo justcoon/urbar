@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * {@link sk.c.urbar.data.ie.IExporter} abstract
+ * @author coon
  */
 public abstract class AExporter<T> implements IExporter<T> {
     protected List<String> properties;

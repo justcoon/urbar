@@ -1,13 +1,30 @@
 package sk.c.urbar.scene.history;
 
 /**
- * Created by coon on 12/25/13.
+ * content history
+ *
+ * @author coon
  */
 public interface IContentHistory {
 
+    /**
+     * previous item
+     *
+     * @return
+     */
     public IHistoryItem getPrevious();
 
+    /**
+     * current item
+     *
+     * @return
+     */
     public IHistoryItem getCurrent();
 
+    /**
+     * go back
+     *
+     * @return
+     */
     public boolean goBack();
 }

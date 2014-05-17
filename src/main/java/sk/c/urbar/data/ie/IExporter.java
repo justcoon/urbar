@@ -5,6 +5,8 @@ import java.util.List;
 
 /**
  * exporter
+ *
+ * @author coon
  */
 public interface IExporter<T> {
 

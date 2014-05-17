@@ -16,7 +16,11 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
- * Created by coon on 12/26/13.
+ * dialog with content handling
+ *
+ * @author coon
+ *
+ * @see sk.c.urbar.Dialog.DialogContentHandler
  */
 public class Dialog {
     Stage dialog;

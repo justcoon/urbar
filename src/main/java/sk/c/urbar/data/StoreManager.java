@@ -18,7 +18,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by coon on 12/23/13.
+ * {@link sk.c.urbar.data.IStoreManager} impl
+ *
+ * @author coon
  */
 public class StoreManager implements IStoreManager {
 
@@ -172,6 +174,11 @@ public class StoreManager implements IStoreManager {
         return retVal;
     }
 
+    /**
+     * get settings manager
+     *
+     * @return
+     */
     protected ISettingsManager getSettingsManager() {
         return SettingsManager.getInstance();
     }

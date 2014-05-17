@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * {@link sk.c.urbar.data.ie.IImporter} abstract
+ * @author coon
  */
 public abstract class AImporter<T> implements IImporter<T> {
     protected List<List<?>> values = new ArrayList<>();

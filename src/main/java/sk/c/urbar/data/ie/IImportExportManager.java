@@ -3,7 +3,9 @@ package sk.c.urbar.data.ie;
 import java.io.File;
 
 /**
- * Created by coon on 1/6/14.
+ * import/export manager
+ *
+ * @author coon
  */
 public interface IImportExportManager {
 

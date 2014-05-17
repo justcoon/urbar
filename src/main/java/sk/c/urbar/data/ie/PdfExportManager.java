@@ -15,7 +15,8 @@ import java.io.FileOutputStream;
 import java.util.List;
 
 /**
- * Created by coon on 12/23/13.
+ *  pdf {@link sk.c.urbar.data.ie.IImportExportManager}
+ *  @author coon
  */
 public class PdfExportManager implements IImportExportManager {
 

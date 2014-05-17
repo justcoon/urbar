@@ -22,7 +22,9 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Created by coon on 12/23/13.
+ * csv {@link sk.c.urbar.data.ie.IImportExportManager}
+ *
+ * @author coon
  */
 public class CsvImportExportManager implements IImportExportManager {
 
