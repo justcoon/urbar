@@ -8,7 +8,6 @@ import javafx.scene.control.TableCell;
 import org.apache.commons.beanutils.ConvertUtils;
 
 /**
- * editable checkbox {@link javafx.scene.control.TableCell}
  * @author coon
  */
 public class EditingCheckBoxCell<S, T> extends TableCell<S, T> {
@@ -22,7 +21,7 @@ public class EditingCheckBoxCell<S, T> extends TableCell<S, T> {
         checkBox.setDisable(true);
         checkBox.selectedProperty().addListener(new ChangeListener<Boolean>() {
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                if(isEditing())        {
+                if (isEditing()) {
                     commitEdit(getTypeValue(checkBox.isSelected()));
                 }
             }
@@ -47,15 +46,18 @@ public class EditingCheckBoxCell<S, T> extends TableCell<S, T> {
         checkBox.setDisable(false);
         checkBox.requestFocus();
     }
+
     @Override
     public void cancelEdit() {
         super.cancelEdit();
         checkBox.setDisable(true);
     }
+
     public void commitEdit(T value) {
         super.commitEdit(value);
         checkBox.setDisable(true);
     }
+
     @Override
     public void updateItem(T item, boolean empty) {
         super.updateItem(item, empty);
@@ -63,6 +65,7 @@ public class EditingCheckBoxCell<S, T> extends TableCell<S, T> {
             checkBox.setSelected(getBooleanValue(item));
         }
     }
+
     /**
      * get type value
      *
@@ -72,6 +75,7 @@ public class EditingCheckBoxCell<S, T> extends TableCell<S, T> {
     protected T getTypeValue(Boolean value) {
         return (T) ConvertUtils.convert(value, getType());
     }
+
     /**
      * get string value
      *
@@ -79,10 +83,9 @@ public class EditingCheckBoxCell<S, T> extends TableCell<S, T> {
      * @return
      */
     protected boolean getBooleanValue(T value) {
-        if(value instanceof  Boolean) {
-           return (Boolean) value;
-        }
-        else {
+        if (value instanceof Boolean) {
+            return (Boolean) value;
+        } else {
             return value != null;
         }
 

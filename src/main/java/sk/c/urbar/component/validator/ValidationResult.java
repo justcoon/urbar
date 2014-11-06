@@ -1,9 +1,7 @@
 package sk.c.urbar.component.validator;
 
 /**
- * {@link sk.c.urbar.component.validator.IValidationResult} implementation
- *
- * @author coon
+ * @author coon on 12/30/13.
  */
 public class ValidationResult implements IValidationResult {
     ValidatorState state;

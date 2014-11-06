@@ -3,8 +3,7 @@ package sk.c.urbar.component.validator;
 import java.util.ResourceBundle;
 
 /**
- * min-max length {@link sk.c.urbar.component.validator.ITypeValidator}
- * @author coon
+ * @author coon on 12/30/13.
  */
 //TODO otestovat
 public class MinMaxLengthTypeValidator<T> extends ATypeValidator<T> {

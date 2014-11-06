@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Vector;
 
 /**
- * person dto
+ * person DTO
  *
  * @author coon
  */

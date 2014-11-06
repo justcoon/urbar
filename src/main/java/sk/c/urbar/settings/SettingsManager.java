@@ -11,19 +11,11 @@ import java.io.FileOutputStream;
 import java.util.Properties;
 
 /**
- * {@link sk.c.urbar.settings.ISettingsManager} impl
- *
- * @author coon
+ * @author coon on 12/23/13.
  */
 public class SettingsManager implements ISettingsManager {
     //--
-    /**
-     * settings file name
-     */
     public static final String SETTINGS_FILE_NAME = "urbar.properties";
-    /**
-     * settings directory
-     */
     public static final String SETTINGS_DIRECTORY = ".urbar";
     /**
      * singleton instance

@@ -4,8 +4,6 @@ import sk.c.urbar.data.RateController;
 import sk.c.urbar.data.RateUtils;
 
 /**
- * share votes {@link sk.c.urbar.component.table.PropertyValueFactory}
- *
  * @author coon
  */
 public class ShareVotesValueFactory extends PropertyValueFactory<Integer> {

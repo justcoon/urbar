@@ -3,8 +3,6 @@ package sk.c.urbar.data.ie;
 import java.io.File;
 
 /**
- * import/export manager
- *
  * @author coon
  */
 public interface IImportExportManager {

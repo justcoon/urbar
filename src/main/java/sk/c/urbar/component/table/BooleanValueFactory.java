@@ -1,7 +1,7 @@
 package sk.c.urbar.component.table;
 
 /**
- * boolean {@link sk.c.urbar.component.table.PropertyValueFactory}
+ * @author coon
  */
 public class BooleanValueFactory extends PropertyValueFactory<Boolean> {
     protected String trueValue = ("true");

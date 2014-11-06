@@ -18,11 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * {@link sk.c.urbar.data.IStoreManager} impl
- *
- * @author coon
- *
- * @see com.thoughtworks.xstream.XStream
+ * @author coon on 12/23/13.
  */
 public class StoreManager implements IStoreManager {
 
@@ -176,11 +172,6 @@ public class StoreManager implements IStoreManager {
         return retVal;
     }
 
-    /**
-     * get settings manager
-     *
-     * @return
-     */
     protected ISettingsManager getSettingsManager() {
         return SettingsManager.getInstance();
     }

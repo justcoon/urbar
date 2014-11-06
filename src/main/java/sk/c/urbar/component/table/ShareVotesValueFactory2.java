@@ -9,8 +9,6 @@ import sk.c.urbar.data.RateUtils;
 import sk.c.urbar.data.entity.Share;
 
 /**
- * share votes cell value factory
- *
  * @author coon
  */
 public class ShareVotesValueFactory2 implements Callback<TableColumn.CellDataFeatures<Object, String>, ObservableValue<String>> {
@@ -39,7 +37,7 @@ public class ShareVotesValueFactory2 implements Callback<TableColumn.CellDataFea
 
             if (share.getCustom()) {
 
-                if(share.getVotes() != null) {
+                if (share.getVotes() != null) {
                     votes = share.getVotes();
                 }
 

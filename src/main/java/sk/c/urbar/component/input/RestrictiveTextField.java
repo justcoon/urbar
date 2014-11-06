@@ -9,7 +9,6 @@ import javafx.beans.value.ObservableValue;
 import javafx.scene.control.TextField;
 
 /**
- * restrictive text field
  * @author coon
  */
 public class RestrictiveTextField extends TextField {

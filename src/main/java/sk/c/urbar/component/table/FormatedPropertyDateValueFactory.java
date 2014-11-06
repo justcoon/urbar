@@ -4,8 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * formated {@link sk.c.urbar.component.table.PropertyValueFactory}
- *
  * @author coon
  */
 public class FormatedPropertyDateValueFactory extends PropertyValueFactory<java.util.Date> {

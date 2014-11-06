@@ -15,8 +15,7 @@ import java.io.FileOutputStream;
 import java.util.List;
 
 /**
- *  pdf {@link sk.c.urbar.data.ie.IImportExportManager}
- *  @author coon
+ * @author coon
  */
 public class PdfExportManager implements IImportExportManager {
 

@@ -4,7 +4,6 @@ import java.text.MessageFormat;
 import java.util.ResourceBundle;
 
 /**
- * abstract {@link sk.c.urbar.component.validator.ITypeValidator}
  * @author coon
  */
 public abstract class ATypeValidator<T> implements ITypeValidator<T> {

@@ -6,8 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 
 /**
- * date format {@link sk.c.urbar.component.validator.ITypeValidator}
- * @author coon
+ * @author coon on 12/30/13.
  */
 public class DateFormatValidator<T> extends ATypeValidator<T> {
 

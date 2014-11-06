@@ -16,11 +16,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
- * dialog with content handling
- *
  * @author coon
- *
- * @see sk.c.urbar.Dialog.DialogContentHandler
  */
 public class Dialog {
     Stage dialog;
@@ -42,23 +38,10 @@ public class Dialog {
         return ResourceBundle.getBundle(Main.MESSAGE_BUNDLES, getLocale());
     }
 
-    /**
-     * get dialog stage
-     * @return
-     */
     public Stage getStage() {
         return dialog;
     }
 
-    /**
-     * show dialog
-     *
-     * @param fxml
-     * @param value
-     * @param <T>
-     * @return
-     * @throws Exception
-     */
     public <T> T dialog(String fxml, WritableValue<?> value) throws Exception {
 
 

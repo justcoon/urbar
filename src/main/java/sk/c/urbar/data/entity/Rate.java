@@ -1,7 +1,7 @@
 package sk.c.urbar.data.entity;
 
 /**
- * rate dto
+ * rate DTO
  *
  * @author coon
  */

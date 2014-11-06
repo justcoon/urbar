@@ -9,8 +9,6 @@ import org.apache.commons.beanutils.PropertyUtils;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * property value factory
- *
  * @author coon
  */
 public class PropertyValueFactory<T> implements Callback<TableColumn.CellDataFeatures<Object, String>, ObservableValue<String>> {

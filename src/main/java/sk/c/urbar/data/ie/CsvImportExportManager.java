@@ -22,8 +22,6 @@ import java.io.*;
 import java.util.*;
 
 /**
- * csv {@link sk.c.urbar.data.ie.IImportExportManager}
- *
  * @author coon
  */
 public class CsvImportExportManager implements IImportExportManager {

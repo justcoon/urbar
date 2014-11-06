@@ -1,7 +1,7 @@
 package sk.c.urbar.data.entity;
 
 /**
- * share dto
+ * share DTO
  *
  * @author coon
  */

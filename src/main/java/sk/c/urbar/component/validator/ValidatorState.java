@@ -1,9 +1,7 @@
 package sk.c.urbar.component.validator;
 
 /**
- * validation state
- *
- * @author coon
+ * @author coon on 12/30/13.
  */
 public enum ValidatorState {
 

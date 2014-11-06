@@ -5,12 +5,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * app utils
- *
  * @author coon
  */
 public class Utils {
-
 
     public static String getDateString(Date date, SimpleDateFormat dateFormat) {
         return date != null && dateFormat != null ? dateFormat.format(date) : null;
