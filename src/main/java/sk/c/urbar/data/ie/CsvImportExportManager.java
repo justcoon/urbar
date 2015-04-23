@@ -15,6 +15,7 @@ import org.supercsv.prefs.CsvPreference;
 import sk.c.urbar.data.PersonController;
 import sk.c.urbar.data.entity.Person;
 import sk.c.urbar.settings.ISettingsManager;
+import sk.c.urbar.settings.SettingProperty;
 import sk.c.urbar.settings.SettingsManager;
 
 import java.beans.PropertyDescriptor;
@@ -82,10 +83,16 @@ public class CsvImportExportManager implements IImportExportManager {
         if (file != null) {
             log.debug("save export file " + file.getName());
 
-            FileWriter fw = null;
+            String encoding = SettingsManager.getInstance().getValue(SettingProperty.ENCODING);
 
+            Writer fw = null;
+            FileOutputStream fos = null;
             try {
-                fw = new FileWriter(file);
+
+                fos = new FileOutputStream(file);
+                fw = new OutputStreamWriter(fos, encoding);
+
+//                fw = new FileWriter(file);
 
                 setValues(exporter, CsvPreference.STANDARD_PREFERENCE, fw);
 
@@ -99,6 +106,9 @@ public class CsvImportExportManager implements IImportExportManager {
             try {
                 if (fw != null) {
                     fw.close();
+                }
+                if (fos != null) {
+                    fos.close();
                 }
             } catch (Exception e) {
                 log.error("fw close error:", e);
@@ -187,6 +197,7 @@ public class CsvImportExportManager implements IImportExportManager {
     protected void setValues(IExporter<?> exporter, CsvPreference preference, Writer writer) throws Exception {
 
         if (exporter != null && writer != null) {
+
             List<String> prop = exporter.getProperties();
 
             String[] properties = prop.toArray(new String[prop.size()]);

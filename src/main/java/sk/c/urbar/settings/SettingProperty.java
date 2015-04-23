@@ -14,7 +14,13 @@ public enum SettingProperty {
     /**
      * data file name
      */
-    DATA_FILE_NAME("urbar.data.filename", "urbar.xml");
+    DATA_FILE_NAME("urbar.data.filename", "urbar.xml"),
+
+    /**
+     * encoding
+     */
+    ENCODING("urbar.encoding", "UTF-8");
+
     //--
     final String propertyName;
     final Object defaultValue;

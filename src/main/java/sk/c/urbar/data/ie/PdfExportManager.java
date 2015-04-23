@@ -9,6 +9,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import sk.c.urbar.data.PersonController;
 import sk.c.urbar.data.entity.Person;
+import sk.c.urbar.settings.SettingProperty;
+import sk.c.urbar.settings.SettingsManager;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -123,9 +125,11 @@ public class PdfExportManager implements IImportExportManager {
 
         if (exporter != null && writer != null) {
 
+            String encoding = SettingsManager.getInstance().getValue(SettingProperty.ENCODING);
 
             List<String> properties = exporter.getProperties();
             Document document = new Document(PageSize.A4);
+
             // step 2
             PdfWriter.getInstance(document, writer);
             // step 3
@@ -148,14 +152,25 @@ public class PdfExportManager implements IImportExportManager {
 
 //            table.setHeaderRows(1);
             table.getDefaultCell().setBackgroundColor(null);
-            List<String> pValues;
+
             List<List<String>> values = ((IExporter<String>) exporter).getValues();
+
+            String pValue;
 
             for (List<String> value : values) {
 
                 for (String pv : value) {
 
-                    table.addCell(pv);
+                    if (encoding != null && pv != null) {
+                        pValue = new String(pv.getBytes(), encoding);
+                    } else {
+                        pValue = pv;
+                    }
+
+                    if (pValue == null) {
+                        pValue = "";
+                    }
+                    table.addCell(pValue);
                 }
             }
 
