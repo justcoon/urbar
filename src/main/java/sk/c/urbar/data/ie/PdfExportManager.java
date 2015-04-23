@@ -1,8 +1,7 @@
 package sk.c.urbar.data.ie;
 
-import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.PageSize;
+import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.apache.commons.logging.Log;
@@ -126,6 +125,8 @@ public class PdfExportManager implements IImportExportManager {
         if (exporter != null && writer != null) {
 
             String encoding = SettingsManager.getInstance().getValue(SettingProperty.ENCODING);
+            BaseFont baseFont = BaseFont.createFont(BaseFont.HELVETICA, encoding, BaseFont.NOT_EMBEDDED);
+            Font font = new Font(baseFont);
 
             List<String> properties = exporter.getProperties();
             Document document = new Document(PageSize.A4);
@@ -146,7 +147,7 @@ public class PdfExportManager implements IImportExportManager {
 
             for (String p : properties) {
 
-                table.addCell(p);
+                table.addCell(new Phrase(p, font));
 
             }
 
@@ -161,16 +162,12 @@ public class PdfExportManager implements IImportExportManager {
 
                 for (String pv : value) {
 
-                    if (encoding != null && pv != null) {
-                        pValue = new String(pv.getBytes(), encoding);
-                    } else {
-                        pValue = pv;
-                    }
-
+                    pValue = pv;
+                   
                     if (pValue == null) {
                         pValue = "";
                     }
-                    table.addCell(pValue);
+                    table.addCell(new Phrase(pValue, font));
                 }
             }
 

@@ -19,7 +19,7 @@ public enum SettingProperty {
     /**
      * encoding
      */
-    ENCODING("urbar.encoding", "UTF-8");
+    ENCODING("urbar.encoding", "Cp1250");
 
     //--
     final String propertyName;
